@@ -6,32 +6,30 @@ namespace AmazonAutomation
     public class CartCheck
     {
 
-        // The commented code below is still under construction, will be used later when following tests are added,
-        // left in because it will be in this class
-        //private int Number;
+       private int Number;
 
-        //public void CartNumber(int Number)
+        public void CartNumber(int Number)
 
-        //{
-            //this.Number = Number;
-        //}
+        {
+            this.Number = Number;
+        }
 
 
-        //public static bool FirstItemsQuantityIsNumber(int CartNumber) 
+        public static bool FirstItemsQuantityIsNumber(int CartNumber) 
 
-        //{
+        {
 
-            //var CartCount = Driver.Instance.FindElement(By.XPath("//input[@maxlength='3']"));
-            //string ItemsInCartString = CartCount.Text;
-            //int itemsInCart = Convert.ToInt32(value: ItemsInCartString);
-            //{
-                //if ( itemsInCart != CartNumber + 3) //will need to get xpath and do that plus one 
-                    //return false;
+            var CartCount = Driver.Instance.FindElement(By.XPath("//span[@class='a-dropdown-prompt']"));
+            string ItemsInCartString = CartCount.Text;
+            int itemsInCart = Convert.ToInt32(value: ItemsInCartString);
+            {
+                if ( itemsInCart != CartNumber )
+                    return false;
 
-                //else
-                    //return true;
-            //}
-        //}
+                else
+                    return true;
+            }
+        }
 
 
 

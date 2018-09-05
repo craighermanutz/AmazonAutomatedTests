@@ -36,7 +36,7 @@ namespace AmazonTests
         public void Buyer_Can_Increase_Quantity_Of_Item_In_Cart_Beyond_Ten()
         {
 
-            SearchBar.FindAnItem("metolius pas");
+            SearchBar.FindAnItem("your search");
 
             SearchResults.ClickItem();
 
@@ -46,7 +46,7 @@ namespace AmazonTests
 
             CartIncrementAboveNine.SelectIncrement(15);
 
-            NUnit.Framework.Assert.IsTrue(CartCheck.FirstItemsQuantityIsNumber(2), "Quantity does not match");
+            NUnit.Framework.Assert.IsTrue(CartCheck.FirstItemsQuantityIsNumber(15), "Quantity does not match");
 
             SearchBar.EmptyCart();
 
