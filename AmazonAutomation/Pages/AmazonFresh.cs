@@ -26,16 +26,15 @@ namespace AmazonAutomation
 
             try
             {
-                var NotInFresh = Driver.Instance.FindElement(By.XPath("//h1[@id='noResultsTitle']")); 
+                var InFresh = Driver.Instance.FindElement(By.XPath("//span[@id='s-result-count']"));
             }
 
             catch (Exception)
             {
-                var InFresh = Driver.Instance.FindElement(By.XPath("//span[@id='s-result-count']")); 
+                var NotInFresh = Driver.Instance.FindElement(By.XPath("//h1[@id='noResultsTitle']"));
 
-                if (InFresh != null)
+                if (NotInFresh != null)
                     return false;
-
             }
 
             return true;

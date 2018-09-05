@@ -9,7 +9,7 @@ namespace AmazonAutomation
                 get
 
                 {
-                    var id = Driver.Instance.FindElement(By.Id("twotabsearchtextbox"));
+                    var id = Driver.Instance.FindElement(By.Id("navbar"));
                 { 
 
                 return true;

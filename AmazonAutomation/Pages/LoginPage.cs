@@ -17,7 +17,6 @@ namespace AmazonAutomation
         }
     }
 
-
     public class LoginCommand
     {
         private readonly string userName;
@@ -50,6 +49,5 @@ namespace AmazonAutomation
 
 
         }
-
     }
 }

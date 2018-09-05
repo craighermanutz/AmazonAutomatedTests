@@ -26,6 +26,8 @@ namespace AmazonTests
 
             CartIncrementBelowNine.IncByTwo.Select();
 
+            NUnit.Framework.Assert.IsTrue(CartCheck.FirstItemsQuantityIsNumber(2), "Quantity does not match");
+
             SearchBar.EmptyCart();
 
         }
