@@ -39,9 +39,8 @@ namespace AmazonTests
             }
 
         }
-
-    
-    public class CartIncrementBelowNine
+   
+    public class CartIncrementBelowNine  //Nested classes are used here to simplify and limit tester options
 
     {
         public class IncByOne
